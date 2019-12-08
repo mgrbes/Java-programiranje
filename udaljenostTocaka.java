@@ -10,14 +10,14 @@ JOptionPane.showInputDialog("Unesite broj")
 double x2=Float.parseFloat(
 JOptionPane.showInputDialog("Unesite broj")
 );
-double x3=Float.parseFloat(
+double y1=Float.parseFloat(
 JOptionPane.showInputDialog("Unesite broj")
 );
-double x4=Float.parseFloat(
+double y2=Float.parseFloat(
 JOptionPane.showInputDialog("Unesite broj")
 );
 double a=x2-x1;
-double b=x4-x3;
+double b=y2-y1;
 System.out.println(Math.sqrt((a*a)+(b*b)));
 }
 }
