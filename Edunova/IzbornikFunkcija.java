@@ -10,6 +10,20 @@ public class IzbornikFunkcija {
 		if (a==1) {
 			float b=Float.parseFloat(JOptionPane.showInputDialog("Unesite broj za mnozenje"));
 			float c=Float.parseFloat(JOptionPane.showInputDialog("Unesite broj za mnozenje"));
+			System.out.println(b*c);
+		}
+		if(a==2) {
+			float d=Float.parseFloat(JOptionPane.showInputDialog("Unesite broj za dijeljenje"));
+			float e=Float.parseFloat(JOptionPane.showInputDialog("Unesite broj za dijeljenje"));
+			System.out.println(d/e);
+		}
+		if(a==3) {
+			double f=Float.parseFloat(JOptionPane.showInputDialog("Unesite broj za korjenovanje"));
+			System.out.println(Math.sqrt(f));
+		}
+		if(a==4) {
+			double g=Float.parseFloat(JOptionPane.showInputDialog("Unesite negativan broj"));
+			System.out.println(Math.abs(g));
 		}
 
 	}
