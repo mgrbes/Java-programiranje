@@ -5,49 +5,47 @@ import javax.swing.JOptionPane;
 public class spiralMatrica {
 
 	public static void main(String[] args) {
-		int a = Integer.parseInt(JOptionPane.showInputDialog("Unesite broj"));
-
-		int niz[][] = new int[a][a];
-
-		int red1 = a - 1;
-		int stup1 = a - 1;
-		int red2 = 0;
-		int stup2 = 0;
-		int brojMatrice = 1;
-
-		while (brojMatrice <= a*a) {
+		
+			//int a = Integer.parseInt(JOptionPane.showInputDialog("Unesite prvi broj"));
+			//int b = Integer.parseInt(JOptionPane.showInputDialog("Unesite drugi broj"));
 			
-			for (int i = red1; i >= red2; i--) {
-				niz[red1][i] = brojMatrice;
-				brojMatrice++;
-				
+			int a=5;
+			int b=4;
+			
+			int maxi = a-1;
+			int maxj = b-1;
+			int mini=0;
+			int minj=0;
+			
+			int broj=1;
+			
+			int[][] matrica = new int [a][b];
+			
+			for(int i=maxj;i>=0;i--) {
+				matrica[maxi][i]=broj++;
+			}
+			for(int i=maxi-1;i>=0;i--) {
+				matrica[i][mini]=broj++;
+			}
+			for(int i=mini+1;i<=maxj;i++) {
+				matrica[minj][i]=broj++;
+			}
+			for(;;) {
+				matrica[][]==broj++;
 			}
 			
-			for (int i = red1 - 1; i >= red2; i--) {
-				niz[i][stup2] = brojMatrice;
-				brojMatrice++;
-			}
-			for (int i = stup2+1; i <= stup1; i++) {
-				niz[red2][i] = brojMatrice;
-				brojMatrice++;
-			}
-			for (int i = red2+1; i <= red1 - 1; i++) {
-				niz[i][stup1] = brojMatrice;
-				brojMatrice++;
-			}
-			stup2++;
-			red2++;
-			stup1--;
-			red2--;
+			
+			
+			
+			for (int i = 0; i < a; i++)
+		    {
+		        for (int j = 0; j < b; j++)
+		        {
+		            System.out.print(matrica[i][j]+ "\t");
+		        }
+		         
+		        System.out.println();
+		    }
 		}
-		for (int i = 0; i < a; i++) {
-			for (int j = 0; j < a; j++) {
-				System.out.print(niz[i][j] + "\t");
-			}
-
-			System.out.println();
-		}
-
-	}
 
 }
