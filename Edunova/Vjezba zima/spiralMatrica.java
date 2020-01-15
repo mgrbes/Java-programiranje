@@ -8,35 +8,36 @@ public class spiralMatrica {
 		
 			int a = Integer.parseInt(JOptionPane.showInputDialog("Unesite prvi broj"));
 			int b = Integer.parseInt(JOptionPane.showInputDialog("Unesite drugi broj"));
-			
-			//int a=5;
+			//int a=6;
 			//int b=4;
 			
-			int maxi = a-1;
-			int maxj = b-1;
-			int mini=0;
-			int minj=0;
+			
+			int xmax = a-1;
+			int ymax = b-1;
+			int xmin=0;
+			int ymin=0;
 			
 			int broj=1;
 			
 			int[][] matrica = new int [a][b];
 			while(broj<=a*b) {
-			for(int i=maxj;i>=mini;i--) {
-				matrica[maxi][i]=broj++;
+				
+			for(int i=ymax;i>=xmin;) {
+				matrica[xmax][i--]=broj++;
 			}
-			for(int i=maxi-1;i>=minj;i--) {
-				matrica[i][mini]=broj++;
+			for(int i=xmax-1;i>=xmin;) {
+				matrica[i--][ymin]=broj++;
 			}
-			for(int i=mini+1;i<=maxj;i++) {
-				matrica[minj][i]=broj++;
+			for(int i=ymin+1;i<=ymax;) {
+				matrica[xmin][i++]=broj++;
 			}
-			for(int i=minj+1;i<=maxi-1;i++) {
-				matrica[i][maxj]=broj++;
+			for(int i=xmin+1;i<=xmax-1;) {
+				matrica[i++][ymax]=broj++;
 			}
-			minj++;
-			mini++;
-			maxj--;
-			maxi--;
+			ymin++;
+			xmin++;
+			ymax--;
+			xmax--;
 			
 			}
 			
