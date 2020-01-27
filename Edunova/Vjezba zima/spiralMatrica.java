@@ -25,14 +25,26 @@ public class spiralMatrica {
 			for(int i=ymax;i>=xmin;) {
 				matrica[xmax][i--]=broj++;
 			}
+			if(broj>(a*b)) {
+				break;
+			}
 			for(int i=xmax-1;i>=xmin;) {
 				matrica[i--][ymin]=broj++;
+			}
+			if(broj>(a*b)) {
+				break;
 			}
 			for(int i=ymin+1;i<=ymax;) {
 				matrica[xmin][i++]=broj++;
 			}
+			if(broj>(a*b)) {
+				break;
+			}
 			for(int i=xmin+1;i<=xmax-1;) {
 				matrica[i++][ymax]=broj++;
+			}
+			if(broj>(a*b)) {
+				break;
 			}
 			ymin++;
 			xmin++;
