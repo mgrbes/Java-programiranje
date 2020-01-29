@@ -15,7 +15,7 @@ public class Start {
 		Scanner input=new Scanner(System.in);
 		unos();
 		for(Opcina o:opcine) {
-			System.out.println("Zupan "+o.getZupan()+" je na vlasti u opcini "+o.getNaziv());
+			System.out.println("Zupan "+o.getZupan()+" je na vlasti u opcini "+o.getNaziv()+" koja je u zupaniji "+o.getZupanija());
 		}
 	}
 
@@ -24,8 +24,9 @@ public class Start {
 		Opcina opcina;
 		while(true) {
 			opcina=new Opcina();
-			opcina.setNaziv(ucitajOpcina());
 			opcina.setZupan(ucitajZupana());
+			opcina.setNaziv(ucitajOpcina());
+			opcina.setZupanija(ucitajZupaniju());
 			opcine.add(opcina);
 			unos=JOptionPane.showInputDialog("X za kraj");
 			if(unos.trim().toLowerCase().equals("x")) {
@@ -37,6 +38,18 @@ public class Start {
 	}
 
 	
+
+	private String ucitajZupaniju() {
+		String unos;
+		while(true) {
+			unos=JOptionPane.showInputDialog("Unesite zupaniju");
+			if(unos.trim().length()==0) {
+				System.out.println("Molimo unesite naziv zupana");
+			}
+			return unos;
+		}
+		
+	}
 
 	private String ucitajZupana() {
 		String unos;
