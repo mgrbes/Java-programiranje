@@ -5,6 +5,8 @@
  */
 package Hibernate;
 
+import Util.HibernateUtil;
+import org.hibernate.Session;
 /**
  *
  * @author Grbeš
@@ -12,11 +14,11 @@ package Hibernate;
 public class Start {
 
     public Start() {
-        
+        HibernateUtil.getSessionFactory().openSession();
     }
     
     public static void main(String[] args) {
-        
+        new Start();
     }
     
 }

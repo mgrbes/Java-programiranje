@@ -13,7 +13,7 @@
     <session-factory>
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mariadb://localhost:3306/edunovajp21_hib?useSSL=false</property>
+        <property name="connection.url">jdbc:mariadb://localhost:3306/cafe_bar?useSSL=false</property>
         <property name="connection.username">edunova</property>
         <property name="connection.password">edunova</property>
         <!-- JDBC connection pool settings ... using built-in test pool -->
@@ -45,7 +45,10 @@
         
         
         <!-- Ovdje navodimo naše mapirane klase -->
-        <mapping class="" />
+       <mapping class="model.Dobavljac"/>
+<mapping class="model.Zaposlenik"/>
+<mapping class="model.Pice"/>
+<mapping class="model.Racun"/>
        
         
         
