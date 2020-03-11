@@ -19,9 +19,9 @@ import javax.persistence.OneToMany;
 @Entity
 public class Stavka extends Entitet{
     @ManyToOne
-    public Pice pice;
+    private Pice pice;
     @ManyToMany
-    public List<Racun>racuni=new ArrayList<>();
+    private List<Racun>racuni=new ArrayList<>();
 
     public Pice getPice() {
         return pice;
