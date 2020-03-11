@@ -18,8 +18,7 @@ public class Pice extends Entitet{
     private Integer kolicina;
     private String vrsta;
     private BigDecimal cijena;
-    @ManyToOne
-    private Dobavljac dobavljac;
+    
 
     public Integer getKolicina() {
         return kolicina;
@@ -45,11 +44,4 @@ public class Pice extends Entitet{
         this.cijena = cijena;
     }
 
-    public Dobavljac getDobavljac() {
-        return dobavljac;
-    }
-
-    public void setDobavljac(Dobavljac dobavljac) {
-        this.dobavljac = dobavljac;
-    }
 }

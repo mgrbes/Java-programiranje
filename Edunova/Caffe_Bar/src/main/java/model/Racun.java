@@ -20,6 +20,16 @@ public class Racun extends Entitet{
     
     private Date datVrijeme;
     private Integer brojRacuna;
+    
+    private Integer pdv;
+
+    public Integer getPdv() {
+        return pdv;
+    }
+
+    public void setPdv(Integer pdv) {
+        this.pdv = pdv;
+    }
 
     public Zaposlenik getZaposlenik() {
         return zaposlenik;
